@@ -1,0 +1,46 @@
+{
+  "name": "vsce-stryker-example",
+  "displayName": "vsce-stryker-example",
+  "description": "Sample extension to test Stryker integration",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.29.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.helloWorld"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^1.2.0",
+    "@stryker-mutator/html-reporter": "^1.2.0",
+    "@stryker-mutator/javascript-mutator": "^1.2.0",
+    "@stryker-mutator/mocha-framework": "^1.2.0",
+    "@stryker-mutator/mocha-runner": "^1.2.0",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^10.12.21",
+    "chai": "^4.2.0",
+    "eslint": "^5.13.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.0.2",
+    "mocha-junit-reporter": "^1.21.0",
+    "mocha-xunit-reporter": "^1.1.0",
+    "sinon": "^7.3.1",
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28"
+  }
+}
